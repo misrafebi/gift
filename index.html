@@ -324,6 +324,46 @@
     0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
   }
+ .anniversary-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: #ff8fab;
+    margin-bottom: 1.2rem;
+
+    /* Gradient text */
+    background: linear-gradient(45deg, #ff8fab, #ffd6e8, #ffb3d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow effect */
+    text-shadow: 0 0 12px rgba(255, 143, 171, 0.6);
+
+    /* Animation */
+    animation: fadeInGlow 1s ease forwards;
+}
+
+@keyframes fadeInGlow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        text-shadow: 0 0 12px rgba(255, 143, 171, 0.6);
+    }
+}
+.anniversary-title::after {
+    content: " 💖";
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
 </style>
 </head>
 <body>
@@ -419,17 +459,19 @@
   <div class="knew-it-text">I knew it! 🥰</div>
 
   <div class="quote-card">
-   
-    <ul class="quote-lines" id="quoteLines">
-      <li class="quote-line">To my love, my <span class="accent">soulmate.</span></li>
-      <li class="quote-line">My helping hand, my best <span class="accent">friend.</span></li>
-      <li class="quote-line">My happy place, my best <span class="accent">memories.</span></li>
-      <li class="quote-line">My today, tomorrow and <span class="accent">forever.</span></li>
-      <li class="quote-line">My laughter and <span class="accent">support.</span></li>
-      <li class="quote-line">My whole <span class="accent">world.</span></li>
-      <li class="quote-line">My <span class="accent">Husband. 💍</span></li>
-    </ul>
-  </div>
+  <h2 class="anniversary-title">Happy Anniversary 💝</h2>
+
+            <ul class="quote-lines" id="quoteLines">
+              
+                <li class="quote-line">To my love, my <span class="accent">soulmate.</span></li>
+                <li class="quote-line">My helping hand, my best <span class="accent">friend.</span></li>
+                <li class="quote-line">My happy place, my best <span class="accent">memories.</span></li>
+                <li class="quote-line">My today, tomorrow and <span class="accent">forever.</span></li>
+                <li class="quote-line">My laughter and <span class="accent">support.</span></li>
+                <li class="quote-line">My whole <span class="accent">world.</span></li>
+                <li class="quote-line">My <span class="accent">Husband. 💍</span></li>
+            </ul>
+        </div>
 
   <div class="bottom-hearts">💕 💖 💗 💓 💞</div>
 </div>
